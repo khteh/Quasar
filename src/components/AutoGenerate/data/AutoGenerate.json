@@ -1,0 +1,49 @@
+{
+    "name": "Auto Generated Component",
+    "layout": [{
+        "count": 1,
+        "data": [
+          {
+            "type": "toggle",
+            "name": "Auto Generated Toggle Button",
+            "description": "Auto-generate toggle button from JSON",
+            "fieldName": "btnToggle"
+          },
+          {
+            "type": "popUpEdit",
+            "name": "Auto Generated Edit box",
+            "fieldName": "editBox",
+            "hint": "Popup Edit box hint",
+            "errorMsg": "Warning: The value provided fails validationFunction!"
+          },
+          {
+            "type": "popUpEdit",
+            "name": "Auto Generated Edit box (Number)",
+            "dataType": "number",
+            "fieldName": "editBox",
+            "hint": "Popup Edit box (Number) hint",
+            "errorMsg": "Warning: The value provided fails validationFunction!"
+          },
+          {
+            "type": "dropDown",
+            "name": "Auto Generated Selection box",
+            "fieldName": "Select 1 of the options",
+            "options": [
+              { "label": "Option 1", "value": 1, "description": "Option 1" },
+              { "label": "Option 2", "value": 2, "description": "Option 2" },
+              { "label": "Option 3", "value": 3, "description": "Option 3" }
+            ]
+          },
+          {
+            "type": "multiDropDown",
+            "name": "Auto Generated Multi-Selection box",
+            "fieldName": "multi-selection",
+            "options": [
+              { "label": "Option 1", "value": 1, "description": "Option 1" },
+              { "label": "Option 2", "value": 2, "description": "Option 2" },
+              { "label": "Option 3", "value": 3, "description": "Option 3" }
+            ]
+          }
+    ]
+    }]
+}

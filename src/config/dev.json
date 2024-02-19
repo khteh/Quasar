@@ -1,0 +1,7 @@
+{
+	"DBHost": "localhost",
+	"Port": "30001",
+	"Database" : "school",
+	"Username": "guest",
+	"Password": "P*ssw0rd"
+}
