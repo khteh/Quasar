@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "dev": "QENV=development quasar dev",
-    "build": "quasar build",
-    "deploy": "quasar build && push-dir --dir=dist/spa --remote=khteh-page --branch=master",
+    "build": "QENV=production quasar build",
+    "deploy": "QENV=production quasar build && push-dir --dir=dist/spa --remote=khteh-page --branch=master",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test:unit:ui": "majestic",
