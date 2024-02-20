@@ -30,6 +30,45 @@ yarn install
 quasar ext add @quasar/<package name>
 ```
 
+## Emvironment
+
+- Add `.quasar.env.json` which is used during application bootstrap.
+
+```
+{
+  "development": {
+    "API_KEY":"",
+    "AUTH_DOMAIN":"",
+    "PROJECT_ID":"",
+    "STORAGE_BUCKET":"",
+    "MESSAGING_SENDER_ID":"",
+    "APP_ID":"",
+    "MEASUREMENT_ID":"",
+    "DATABASE_URL":""
+  },
+  "production": {
+    "API_KEY":"",
+    "AUTH_DOMAIN":"",
+    "PROJECT_ID":"",
+    "STORAGE_BUCKET":"",
+    "MESSAGING_SENDER_ID":"",
+    "APP_ID":"",
+    "MEASUREMENT_ID":"",
+    "DATABASE_URL":""
+  },
+  "test": {
+    "API_KEY":"",
+    "AUTH_DOMAIN":"",
+    "PROJECT_ID":"",
+    "STORAGE_BUCKET":"",
+    "MESSAGING_SENDER_ID":"",
+    "APP_ID":"",
+    "MEASUREMENT_ID":"",
+    "DATABASE_URL":""
+  }
+}
+```
+
 ## Start the app in development mode (hot-code reloading, error reporting, etc.)
 
 - Generate self-signed cert for serving HTTP/2 over HTTPS.
