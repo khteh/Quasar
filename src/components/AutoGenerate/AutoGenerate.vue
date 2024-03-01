@@ -13,6 +13,7 @@
             :fieldName="field.fieldName"
             :description="field.description"
             :data-test="`toggle-setting-${index}`"
+            :data-cy="`toggle-setting-${index}`"
           />
           <pop-up-edit-setting
             v-if="field.type === 'popUpEdit'"
@@ -21,6 +22,7 @@
             :fieldName="field.fieldName"
             :hint="field.hint"
             :data-test="`popup-edit-setting-${index}`"
+            :data-cy="`popup-edit-setting-${index}`"
           />
           <drop-down-setting
             v-if="field.type === 'dropDown'"
@@ -29,6 +31,7 @@
             :fieldName="field.fieldName"
             :internalOptions="field.options"
             :data-test="`dropdown-setting-${index}`"
+            :data-cy="`dropdown-setting-${index}`"
           />
           <multi-drop-down-setting
             v-if="field.type === 'multiDropDown'"
@@ -37,6 +40,7 @@
             :fieldName="field.fieldName"
             :internalOptions="field.options"
             :data-test="`multidropdown-setting-${index}`"
+            :data-cy="`multidropdown-setting-${index}`"
           />
         </div>
       </div>
