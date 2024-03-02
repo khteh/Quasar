@@ -3,7 +3,7 @@
     <auto-generate :optionsMap="optionsMap" data-test="auto-generate" />
   </q-page>
 </template>
-<script>
+<script lang="ts">
 import { defineComponent, ref } from 'vue';
 import AutoGenerate from '../components/AutoGenerate/AutoGenerate.vue';
 export default defineComponent({

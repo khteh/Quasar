@@ -13,10 +13,10 @@
   </q-item>
 </template>
 
-<script>
-import { getNestedField } from "./getNestedField";
+<script lang="ts">
+import { getNestedField } from './getNestedField';
 export default {
-  name: "DropDownSetting",
+  name: 'DropDownSetting',
   props: {
     name: String,
     fieldName: String,
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     options: {
-      get: function () {
+      get() {
         if (this.optionCountField && this.optionPrefix) {
           // if options are dynamically based on another field
           let arr = [];
@@ -57,8 +57,8 @@ export default {
           if (!fieldOptions) {
             this.$q.notify({
               message: `Unable retrieve options for ${this.name}`,
-              color: "red",
-              position: "bottom-right",
+              color: 'red',
+              position: 'bottom-right',
             });
           }
           return fieldOptions ?? [];
@@ -68,7 +68,7 @@ export default {
       },
     },
     model: {
-      get: function () {
+      get() {
         /*console.log(
           `DropDownSetting getter model: ${JSON.stringify(
             this.dropDownSettingModel
@@ -77,7 +77,7 @@ export default {
         //return this.getNestedField(this.fieldName, null);
         return this.dropDownSettingModel;
       },
-      set: function (newModel) {
+      set(newModel) {
         this.dropDownSettingModel = newModel;
         /*console.log(
           `DropDownSetting setter model: ${JSON.stringify(

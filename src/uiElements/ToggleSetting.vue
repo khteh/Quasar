@@ -29,10 +29,10 @@
   </q-item>
 </template>
 
-<script>
-import { getNestedField } from "./getNestedField";
+<script lang="ts">
+import { getNestedField } from './getNestedField';
 export default {
-  name: "ToggleSetting",
+  name: 'ToggleSetting',
   props: {
     name: String,
     description: String,
@@ -51,16 +51,16 @@ export default {
   },
   computed: {
     model: {
-      get: function () {
-        //return this.getNestedField(this.fieldName, this.getData(), true);
+      get() {
         return this.btnToggleModel;
       },
-      set: function (newValue) {
+      //return this.getNestedField(this.fieldName, this.getData(), true);
+      set(newValue: boolean) {
         this.btnToggleModel = newValue;
         //console.log(`ToggleSetting setter newValue: ${newValue}`);
         this.$emit(
-          "triggerFunc",
-          this.fieldName.replace(/settings.|paymentsettings./g, ""),
+          'triggerFunc',
+          this.fieldName.replace(/settings.|paymentsettings./g, ''),
           newValue
         );
       },
@@ -71,7 +71,7 @@ export default {
     getData() {
       return [];
     },
-    btnToggleTrigger(newValue) {
+    btnToggleTrigger(newValue: boolean) {
       console.log(`btnToggleTrigger(${newValue})`);
       this.model.set(newValue);
     },

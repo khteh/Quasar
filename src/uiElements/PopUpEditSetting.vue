@@ -36,12 +36,12 @@
     </q-item-section>
   </q-item>
 </template>
-<script>
-import * as validation from "./validation";
-import { getNestedField } from "./getNestedField";
+<script lang="ts">
+import * as validation from './validation';
+import { getNestedField } from './getNestedField';
 
 export default {
-  name: "PopUpEditSetting",
+  name: 'PopUpEditSetting',
   props: {
     fieldName: String,
     name: String,
@@ -54,18 +54,18 @@ export default {
   data() {
     return {
       error: false,
-      errorMessage: "",
-      modelProxy: "",
+      errorMessage: '',
+      modelProxy: '',
     };
   },
   computed: {
     model: {
-      get: function () {
+      get() {
         //return this.getNestedField(this.fieldName, this.getData());
         return this.modelProxy;
       },
-      set: function (newValue) {
-        if (this.dataType === "number") {
+      set(newValue) {
+        if (this.dataType === 'number') {
           newValue = Number(newValue);
         }
         this.modelProxy = newValue;
@@ -92,7 +92,7 @@ export default {
       }
       this.model = this.modelProxy;
       this.error = false;
-      this.errorMessage = "";
+      this.errorMessage = '';
       return true;
     },
   },

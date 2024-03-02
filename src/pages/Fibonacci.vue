@@ -40,10 +40,10 @@
     />
   </q-page>
 </template>
-<script>
-import { defineComponent, ref } from "vue";
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
 export default defineComponent({
-  name: "FibonacciPage",
+  name: 'FibonacciPage',
   data() {
     return {
       n: ref(0),
@@ -73,7 +73,7 @@ export default defineComponent({
         }
       } else
         console.log(
-          "Please provide a valid integer as query string for fibonacci(n) calculation!"
+          'Please provide a valid integer as query string for fibonacci(n) calculation!'
         );
     },
   },

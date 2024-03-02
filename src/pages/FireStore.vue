@@ -20,14 +20,13 @@
     />
   </q-page>
 </template>
-
-<script>
-import seedData from "../../data/todos.json";
-import { defineComponent } from "vue";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+<script lang="ts">
+import seedData from '../../data/todos.json';
+import { defineComponent } from 'vue';
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
 
 export default defineComponent({
-  name: "FireStorePage",
+  name: 'FireStorePage',
   data() {
     return {
       loading: true,
@@ -43,7 +42,7 @@ export default defineComponent({
       this.loading = true;
       this.todos = [];
       let db = getFirestore();
-      let querySnapshot = await getDocs(collection(db, "todos"));
+      let querySnapshot = await getDocs(collection(db, 'todos'));
       this.todoTitles.clear();
       querySnapshot.forEach((doc) => {
         let data = doc.data();
@@ -66,13 +65,13 @@ export default defineComponent({
         */
         if (!this.todoTitles.has(todo.title)) {
           // Contents of first document
-          await addDoc(collection(getFirestore(), "todos"), { todo });
+          await addDoc(collection(getFirestore(), 'todos'), { todo });
           this.todos.push(todo);
           this.todoTitles.add(todo.title);
         } else {
           await this.showNotif(
-            "Cannot add existing todo item: " + todo.title,
-            "warning"
+            'Cannot add existing todo item: ' + todo.title,
+            'warning'
           );
         }
       });
@@ -83,10 +82,10 @@ export default defineComponent({
         type: level,
         actions: [
           {
-            icon: "close",
+            icon: 'close',
             // for individual action (button):
             attrs: {
-              "aria-label": "Dismiss",
+              'aria-label': 'Dismiss',
             },
           },
         ],
