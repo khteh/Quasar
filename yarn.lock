@@ -8868,9 +8868,9 @@ qs@6.11.0:
     side-channel "^1.0.4"
 
 quasar@^2.8.0:
-  version "2.23.2"
-  resolved "https://registry.yarnpkg.com/quasar/-/quasar-2.23.2.tgz#c9cba75fcc8f867ccd8b28d82daf7fdfae1e0393"
-  integrity sha512-4MeD5/RIkXLVvDgrbhZgBsbwd/v8eJaEiLRkuv6nt0xKCoQ2l7TL2KvmOCs7zf/7uh+o3Y5EsM/59jFqnrVWaQ==
+  version "2.35.1"
+  resolved "https://registry.yarnpkg.com/quasar/-/quasar-2.35.1.tgz#102f4d74c47699498400369d9c76fa6c12e78855"
+  integrity sha512-Y8HJm5AVary0DJAT4Up5wWJCzbCo27nprugWTXHJ0rlQ6OuC1ftmBArBBPaXJFAHqLTafoxsMfRQ7qAncqvgBw==
 
 querystringify@^2.1.1:
   version "2.2.0"
